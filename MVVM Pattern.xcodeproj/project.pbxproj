@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		96DC946C2A28984700D5359B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DC946B2A28984700D5359B /* AppDelegate.swift */; };
-		96DC946E2A28984700D5359B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DC946D2A28984700D5359B /* SceneDelegate.swift */; };
-		96DC94702A28984700D5359B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DC946F2A28984700D5359B /* ViewController.swift */; };
-		96DC94732A28984700D5359B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96DC94712A28984700D5359B /* Main.storyboard */; };
 		96DC94752A28984900D5359B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96DC94742A28984900D5359B /* Assets.xcassets */; };
 		96DC94782A28984900D5359B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96DC94762A28984900D5359B /* LaunchScreen.storyboard */; };
 		96DC94832A28984900D5359B /* MVVM_PatternTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DC94822A28984900D5359B /* MVVM_PatternTests.swift */; };
 		96DC948D2A28984900D5359B /* MVVM_PatternUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DC948C2A28984900D5359B /* MVVM_PatternUITests.swift */; };
 		96DC948F2A28984900D5359B /* MVVM_PatternUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DC948E2A28984900D5359B /* MVVM_PatternUITestsLaunchTests.swift */; };
+		96DC949E2A2899D200D5359B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DC949C2A2899D200D5359B /* MainViewController.swift */; };
+		96DC949F2A2899D200D5359B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96DC949D2A2899D200D5359B /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +37,6 @@
 /* Begin PBXFileReference section */
 		96DC94682A28984700D5359B /* MVVM Pattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVVM Pattern.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DC946B2A28984700D5359B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96DC946D2A28984700D5359B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		96DC946F2A28984700D5359B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		96DC94722A28984700D5359B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96DC94742A28984900D5359B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96DC94772A28984900D5359B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96DC94792A28984900D5359B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +45,8 @@
 		96DC94882A28984900D5359B /* MVVM PatternUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM PatternUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DC948C2A28984900D5359B /* MVVM_PatternUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_PatternUITests.swift; sourceTree = "<group>"; };
 		96DC948E2A28984900D5359B /* MVVM_PatternUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_PatternUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		96DC949C2A2899D200D5359B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		96DC949D2A2899D200D5359B /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +97,16 @@
 		96DC946A2A28984700D5359B /* MVVM Pattern */ = {
 			isa = PBXGroup;
 			children = (
+				96DC94A72A289CD600D5359B /* Networking */,
+				96DC94A62A289CC900D5359B /* Extensions */,
+				96DC94A52A289CBD00D5359B /* Resources */,
+				96DC94A42A289C7A00D5359B /* Classes */,
+				96DC94A32A289C7200D5359B /* Model */,
+				96DC94A22A289C6C00D5359B /* Controllers */,
+				96DC94A12A289C6300D5359B /* ViewModel */,
+				96DC94A02A289C5800D5359B /* View */,
+				96DC949B2A28999100D5359B /* MainViewController */,
 				96DC946B2A28984700D5359B /* AppDelegate.swift */,
-				96DC946D2A28984700D5359B /* SceneDelegate.swift */,
-				96DC946F2A28984700D5359B /* ViewController.swift */,
-				96DC94712A28984700D5359B /* Main.storyboard */,
 				96DC94742A28984900D5359B /* Assets.xcassets */,
 				96DC94762A28984900D5359B /* LaunchScreen.storyboard */,
 				96DC94792A28984900D5359B /* Info.plist */,
@@ -125,6 +129,71 @@
 				96DC948E2A28984900D5359B /* MVVM_PatternUITestsLaunchTests.swift */,
 			);
 			path = "MVVM PatternUITests";
+			sourceTree = "<group>";
+		};
+		96DC949B2A28999100D5359B /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				96DC949C2A2899D200D5359B /* MainViewController.swift */,
+				96DC949D2A2899D200D5359B /* MainViewController.xib */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		96DC94A02A289C5800D5359B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		96DC94A12A289C6300D5359B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		96DC94A22A289C6C00D5359B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		96DC94A32A289C7200D5359B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		96DC94A42A289C7A00D5359B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		96DC94A52A289CBD00D5359B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		96DC94A62A289CC900D5359B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		96DC94A72A289CD600D5359B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +301,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				96DC94782A28984900D5359B /* LaunchScreen.storyboard in Resources */,
+				96DC949F2A2899D200D5359B /* MainViewController.xib in Resources */,
 				96DC94752A28984900D5359B /* Assets.xcassets in Resources */,
-				96DC94732A28984700D5359B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +327,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96DC94702A28984700D5359B /* ViewController.swift in Sources */,
 				96DC946C2A28984700D5359B /* AppDelegate.swift in Sources */,
-				96DC946E2A28984700D5359B /* SceneDelegate.swift in Sources */,
+				96DC949E2A2899D200D5359B /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +365,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		96DC94712A28984700D5359B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				96DC94722A28984700D5359B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		96DC94762A28984900D5359B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,9 +502,7 @@
 				INFOPLIST_FILE = "MVVM Pattern/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,9 +510,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.burakoztopuz.MVVM-Pattern";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -470,9 +531,7 @@
 				INFOPLIST_FILE = "MVVM Pattern/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,9 +539,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.burakoztopuz.MVVM-Pattern";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
