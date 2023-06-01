@@ -17,4 +17,16 @@ class MainViewModal {
         return 10
     }
     
+    func getData() {
+        APICaller.getTrendingMovies { result in
+            switch result {
+            case .success(let data):
+                print("Top trending count: \(data.results.count)")
+            case .failure(let error):
+                print(error)
+                
+            }
+        }
+    }
+    
 }
