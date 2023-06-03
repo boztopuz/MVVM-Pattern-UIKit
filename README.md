@@ -13,7 +13,7 @@ In this project you will see, MVVM pattern details, API calls and usage of contr
 
   
 ## Screen Shots
-![Screenshot](ScreenShots/launchScreen.png)
+![Screenshot](ScreenShots/launcScreen.png)
 ![Screenshot](ScreenShots/mainScreen.png)
 
 
