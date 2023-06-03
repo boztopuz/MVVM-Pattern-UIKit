@@ -22,6 +22,12 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
         mainTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
+    func reloadTableView() {
+        DispatchQueue.main.async {
+            self.mainTableView.reloadData()
+        }
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         viewModel.numberOfSection()
     }
@@ -33,7 +39,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        content.text = "\(indexPath.row)"
+        content.text = self.cellDataSource[indexPath.row].originalTitle
         
         cell.contentConfiguration = content
         

@@ -10,6 +10,7 @@ import Foundation
 class MainViewModal {
     
     var isLoading: Observable<Bool> = Observable(false)
+    var cellDataSource: Observable<[Movie]> = Observable(nil)
     var dataSource: TrendingMovieModel?
     
     func numberOfSection() -> Int {
@@ -17,7 +18,7 @@ class MainViewModal {
     }
     
     func numberOfRows(in section: Int) -> Int {
-        return 10
+        self.dataSource?.results.count ?? 0
     }
     
     func getData() {
@@ -32,6 +33,7 @@ class MainViewModal {
             switch result {
             case .success(let data):
                 self.dataSource = data
+                self.mapCellData()
             case .failure(let error):
                 print(error)
                 
@@ -39,4 +41,7 @@ class MainViewModal {
         }
     }
     
+    func mapCellData() {
+        self.cellDataSource.value = self.dataSource?.results ?? []
+    }
 }

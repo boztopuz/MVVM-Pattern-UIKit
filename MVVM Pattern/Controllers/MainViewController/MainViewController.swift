@@ -16,14 +16,17 @@ class MainViewController: UIViewController {
     //ViewModel:
     var viewModel: MainViewModal = MainViewModal()
     
+    //variables:
+    var cellDataSource: [Movie] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
         bindViewModel()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         viewModel.getData()
     }
     
@@ -46,9 +49,13 @@ class MainViewController: UIViewController {
                 }
             }
         }
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        viewModel.getData()
+        
+        viewModel.cellDataSource.bind { [weak self] movies in
+            guard let self = self, let movies = movies else {
+                return
+            }
+            self.cellDataSource = movies
+            self.reloadTableView()
+        }
     }
 }
