@@ -34,6 +34,7 @@ class MainMovieCell: UITableViewCell {
         
         backView.addBorder(color: .label, width: 1)
         backView.round()
+        backView.backgroundColor = .lightGray
         
         movieImageView.round(5)
     }
