@@ -9,6 +9,9 @@ import Foundation
 
 class MainViewModal {
     
+    var isLoading: Observable<Bool> = Observable(false)
+    var dataSource: TrendingMovieModel?
+    
     func numberOfSection() -> Int {
         return 1
     }
@@ -18,10 +21,17 @@ class MainViewModal {
     }
     
     func getData() {
+        if isLoading.value ?? true {
+            return
+        }
+        isLoading.value = true
+
         APICaller.getTrendingMovies { result in
+            self.isLoading.value = false
+            
             switch result {
             case .success(let data):
-                print("Top trending count: \(data.results.count)")
+                self.dataSource = data
             case .failure(let error):
                 print(error)
                 
